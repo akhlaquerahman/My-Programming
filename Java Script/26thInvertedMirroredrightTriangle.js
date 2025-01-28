@@ -10,7 +10,11 @@ for (let i = 1; i <= row; i++) {
     }
 
     for (let k = 1; k <= m; k++) {
-        a += "*";
+        if (i === 1 || k === 1 || k === m) {
+            a += "*"; // Print a star at the edges
+          } else {
+            a += " "; // Add a space for the hollow part
+          }
       }
 
     console.log(a)
